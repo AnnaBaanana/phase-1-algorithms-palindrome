@@ -1,14 +1,41 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let wordBack;
+  let lastIndex = word.length - 1
+  let wordBackArray = []
+  for (let i = lastIndex; i >= 0; i--) {
+    wordBackArray.push(word[i])
+    console.log(word[i])
+  }
+  wordBack = wordBackArray.join("");
+  console.log(wordBack)
+  let result;
+  if (word == wordBack) {
+    result = true
+  } else { result = false }
+  return result
 }
+
+console.log(isPalindrome("mom"))
+
+
+  // Write your algorithm here
 
 /* 
   Add your pseudocode here
+  take the word
+  spell it backwards
+      find length
+      start with last index
+      push it into a new array?
+  compare wor to backward spelling
+  return true if same, false if different
 */
+
 
 /*
   Add written explanation of your solution here
 */
+
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
